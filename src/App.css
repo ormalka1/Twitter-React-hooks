@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+.twitter-app{
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Side navbar*/
+.side-navbar{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  margin: 0;
+  flex-grow: 1;
+  max-width: 230px;
+}
+
+.logo{
+  width: 46px;
+  height: 2rem;
+  padding-bottom: 7px;
+}
+
+.navbar-list-item{
+  padding: 12px;
+}
+.navbar-list-item:hover{
+  color: rgba(29,161,242,1.00);
+}
+
+.navbar-list-item-logo{
+  display: inline-flex;
+}
+.navbar-list-item-logo svg{
+  height: 1.6rem;
+}
+
+.navbar-list-item-text{
+  display: inline-flex;
+  vertical-align: 5px;
+}
+.title{
+  font-size: 20px;
+  font-weight: 550; 
+  margin-left: 10px;
+}
+
+/* Buttons */
+
+.tweet-btn{
+  background-color: rgb(29, 161, 242);
+  border: 0.1px solid rgb(10, 104, 161);
+  border-radius: 9999px;
   color: white;
+  font-weight: 600;
+  box-shadow: rgb(0 0 0 / 8%) 0px 8px 28px;
+  text-align: center;
+  margin: 12px;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+
+.small-btn{
+  width: 80px;
+  height: 40px;
+  line-height: 35px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.large-btn{
+  width: 160px;
+  min-height: 40px;
+  line-height: 50px;
+  font-size: 16px;
+}
+
+.x-large-btn{
+  width: 450px;
+  min-height: 40px;
+  line-height: 50px;
+  font-size: 16px;
+  margin: 12px 0px;
+}
+
+
+/* News feed */
+
+.news-feed-header{
+  border-bottom: rgb(239, 243, 244) 7px solid;
+}
+
+
+.news-feed-header-title{
+  height: 53px;
+  line-height: 50px;
+}
+
+.tweet-item-text-input{
+  flex-grow: 1;
+}
+
+input,
+input::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+.tweet-item-edit-text, input:focus{
+  border: none;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.news-feed{
+  flex-grow: 4;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  display: flex;
+  flex-direction: column;
+}
+.bordered{
+  border: rgb(239, 243, 244) 0.7px solid;
+
+}
+
+.tweet-item{
+  display: flex;
+  width: 100%;
+  padding: 20px 5px;
+}
+
+.tweet-item-pic{
+  flex-basis: 48px;
+  padding: 10px;
+  height: 48px;
+}
+
+.tweet-item-pic img{
+  width: 100%;
+}
+
+.tweet-item-text{
+  padding-top: 14px;
+  padding-left: 2px; 
+  flex-grow: 1;
+}
+
+.tweet-item-text-name{
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.like-btn{
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .navbar-list-item-text {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .large-btn{
+      display: none;
   }
 }

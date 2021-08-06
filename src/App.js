@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import profilePicture from './style/images/profile12.png';
+import cover from './style/images/cover.jpeg';
+import MyRouter from './Routes/MyRouter';
 
 function App() {
+  const currentUser = {
+    username: "Or Malka",
+    picture: profilePicture,
+    cover: cover,
+    bio: "Full Stack Developer"
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="twitter-app">
+      <MyRouter user={currentUser} />
     </div>
   );
 }

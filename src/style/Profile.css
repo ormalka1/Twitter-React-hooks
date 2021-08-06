@@ -1,0 +1,41 @@
+.profile-container{
+    width: 100%;
+    max-height: 400px;
+    margin-left: 25px;
+}
+
+.profile-cover-img{
+    max-height: 120px; 
+}
+
+.cover-img{
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.profile-img{
+    z-index: 3;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    max-width: 25%;
+}
+
+.profile-header{
+    padding-left: 30px;
+}
+
+.profile-header-name{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .cover-img {
+      height: 25%;
+    }
+    .profile-img{
+        width: 15%;
+    }
+  }
