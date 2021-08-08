@@ -8,7 +8,8 @@ function App() {
     username: "Or Malka",
     picture: profilePicture,
     cover: cover,
-    bio: "Full Stack Developer"
+    bio: "Full Stack Developer",
+    isLoggedIn: false
   };
   return (
     <div className="twitter-app">

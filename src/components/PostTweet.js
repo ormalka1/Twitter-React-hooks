@@ -1,12 +1,14 @@
 import React from 'react';
 import TweetBtn from '../common/TweetBtn';
+import { connect } from 'react-redux';
+import { addTweet } from '../actions/actions'
 
 function PostTweet(props) {
     let tweetData = '';
 
     const createNewTweet = () => {
         const newTweet = { ...props.user, tweetData: tweetData }
-        props.addNewTweet(newTweet);
+        props.postTweet(newTweet);
     }
 
     function handleTweetDataChange(e) {
@@ -27,6 +29,11 @@ function PostTweet(props) {
     </div>
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        postTweet: (tweet) => dispatch(addTweet(tweet))
+    }
+}
 
-export default PostTweet;
+export default connect(null, mapDispatchToProps)(PostTweet);
 
