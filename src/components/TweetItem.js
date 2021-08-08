@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as faEmptyHeart } from "@fortawesome/free-regular-svg-icons";
 import { faHeart as faSolidHeart } from "@fortawesome/free-solid-svg-icons";
-import { connect } from 'react-redux';
+
 
 function TweetItem(props) {
     const [isLiked, setIsLiked] = useState(false);
@@ -26,17 +26,5 @@ function TweetItem(props) {
     </div>
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        postTweet: (tweet) => dispatch(addTweet(tweet))
-    }
-}
 
-const mapStateToProps = (state) => {
-    console.log("mapStateToProps - TweetList");
-    console.log(state.tweets);
-    return { tweetList: state.tweets };
-};
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(TweetItem);
+export default TweetItem;

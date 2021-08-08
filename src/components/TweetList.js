@@ -18,4 +18,4 @@ const mapStateToProps = (state) => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(TweetList);
+export default connect(mapStateToProps, null)(TweetList);
