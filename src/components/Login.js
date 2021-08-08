@@ -3,9 +3,11 @@ import '../style/Login.css';
 import { useHistory } from 'react-router-dom';
 import Logo from '../common/Logo';
 import TweetBtn from '../common/TweetBtn';
+import { login } from '../actions/actions'
+import { connect } from 'react-redux';
 
 
-function Login() {
+function Login(props) {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const history = useHistory();
@@ -20,6 +22,7 @@ function Login() {
     function handleLogin() {
         try {
             history.push('/Home');
+            props.onLogin();
         } catch (e) {
             console.log(e);
         }
@@ -50,6 +53,17 @@ function Login() {
     );
 }
 
+const mapStateToProps = (state) => {
+    console.log("mapStateToProps");
+    console.log(state.user);
+    return { user: state.user };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onLogin: () => dispatch(login)
+    }
+}
 
 
-export default Login;
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
