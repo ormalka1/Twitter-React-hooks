@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Twitter-React-hooks/static/css/main.f2041f07.chunk.css",
+    "main.js": "/Twitter-React-hooks/static/js/main.82723921.chunk.js",
+    "main.js.map": "/Twitter-React-hooks/static/js/main.82723921.chunk.js.map",
+    "runtime-main.js": "/Twitter-React-hooks/static/js/runtime-main.57b65381.js",
+    "runtime-main.js.map": "/Twitter-React-hooks/static/js/runtime-main.57b65381.js.map",
+    "static/js/2.3e64aa5e.chunk.js": "/Twitter-React-hooks/static/js/2.3e64aa5e.chunk.js",
+    "static/js/2.3e64aa5e.chunk.js.map": "/Twitter-React-hooks/static/js/2.3e64aa5e.chunk.js.map",
+    "static/js/3.ac6eb031.chunk.js": "/Twitter-React-hooks/static/js/3.ac6eb031.chunk.js",
+    "static/js/3.ac6eb031.chunk.js.map": "/Twitter-React-hooks/static/js/3.ac6eb031.chunk.js.map",
+    "index.html": "/Twitter-React-hooks/index.html",
+    "static/css/main.f2041f07.chunk.css.map": "/Twitter-React-hooks/static/css/main.f2041f07.chunk.css.map",
+    "static/js/2.3e64aa5e.chunk.js.LICENSE.txt": "/Twitter-React-hooks/static/js/2.3e64aa5e.chunk.js.LICENSE.txt",
+    "static/media/cover.0650d42c.jpeg": "/Twitter-React-hooks/static/media/cover.0650d42c.jpeg",
+    "static/media/logo.6ce24c58.svg": "/Twitter-React-hooks/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.57b65381.js",
+    "static/js/2.3e64aa5e.chunk.js",
+    "static/css/main.f2041f07.chunk.css",
+    "static/js/main.82723921.chunk.js"
+  ]
+}
