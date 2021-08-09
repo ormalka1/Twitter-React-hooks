@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import Logo from '../common/Logo';
 import TweetBtn from '../common/TweetBtn';
 import { connect } from 'react-redux';
-import { signup } from '../actions/actions'
+import { signup } from '../actions/loginActions'
 
 
 function Register(props) {
@@ -32,9 +32,8 @@ function Register(props) {
 
     function handleRegister() {
         try {
-            history.push('/Home');
+            history.push('/home');
             props.onRegister();
-            console.log(props);
         } catch (e) {
             console.log(e);
         }
@@ -69,17 +68,11 @@ function Register(props) {
                 />
 
                 <TweetBtn content="Create" size="x-large-btn" onClick={handleRegister} />
-                <p className="message">Already Registered? <a href="/Login">Log In</a> </p>
+                <p className="message">Already Registered? <a href="/login">Log In</a> </p>
             </form>
         </div>
     );
 }
-
-const mapStateToProps = (state) => {
-    console.log("mapStateToProps");
-    return { isLoggedIn: state.isLoggedIn };
-};
-
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -89,4 +82,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Register);
+export default connect(null, mapDispatchToProps)(Register);

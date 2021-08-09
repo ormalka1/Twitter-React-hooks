@@ -1,7 +1,7 @@
 import './App.css';
 import profilePicture from './style/images/profile12.png';
 import cover from './style/images/cover.jpeg';
-import MyRouter from './Routes/MyRouter';
+import MyRouter from './routes/MyRouter';
 
 function App() {
   const currentUser = {

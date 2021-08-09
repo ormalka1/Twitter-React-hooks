@@ -1,9 +1,17 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import loginReducer from '../reducers/loginReducer';
 import tweetsReducer from '../reducers/tweetsReducer';
+import notificationsReducer from '../reducers/notificationsReducer';
+import createSagaMiddleware from 'redux-saga';
+import rootSaga from '../sagas/rootSaga';
 
-const combineReducer = combineReducers({ tweets: tweetsReducer, user: loginReducer });
+const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore(combineReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const combineReducer = combineReducers({ tweets: tweetsReducer, user: loginReducer, notifications: notificationsReducer });
+
+const store = createStore(combineReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
+
+sagaMiddleware.run(rootSaga);
 
 export default store;

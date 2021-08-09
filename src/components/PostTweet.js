@@ -1,13 +1,15 @@
 import React from 'react';
 import TweetBtn from '../common/TweetBtn';
 import { connect } from 'react-redux';
-import { addTweet } from '../actions/actions'
+import { addTweet } from '../actions/tweetsActions'
 
 function PostTweet(props) {
     let tweetData = '';
+    let id = 0;
 
     const createNewTweet = () => {
-        const newTweet = { ...props.user, tweetData: tweetData }
+        const { username, picture } = props.user;
+        const newTweet = { id: id++, username, picture, tweetData: tweetData, isLiked: false }
         props.postTweet(newTweet);
     }
 
