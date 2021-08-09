@@ -9,16 +9,16 @@ function MyRouter(props) {
     return (
         <Router>
             <Switch>
-                <Route path="/Home" >
+                <Route path="/home" >
                     <NewsFeed user={props.user} />
                 </Route>
-                <Route path="/Login">
+                <Route path="/login">
                     <Login />
                 </Route>
-                <Route path="/Register">
+                <Route path="/register">
                     <Register />
                 </Route>
-                <Route path="/Profile">
+                <Route path="/profile">
                     <Profile user={props.user} />
                 </Route>
                 <Route path="/">

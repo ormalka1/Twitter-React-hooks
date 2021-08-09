@@ -3,7 +3,7 @@ import '../style/Login.css';
 import { useHistory } from 'react-router-dom';
 import Logo from '../common/Logo';
 import TweetBtn from '../common/TweetBtn';
-import { login } from '../actions/actions'
+import { login } from '../actions/loginActions'
 import { connect } from 'react-redux';
 
 
@@ -21,7 +21,7 @@ function Login(props) {
 
     function handleLogin() {
         try {
-            history.push('/Home');
+            history.push('/home');
             props.onLogin();
         } catch (e) {
             console.log(e);
@@ -47,17 +47,11 @@ function Login(props) {
                 />
 
                 <TweetBtn content="Log in" size="x-large-btn" onClick={handleLogin} />
-                <p className="message">Not Registered? <a href="/Register">Register</a> </p>
+                <p className="message">Not Registered? <a href="/register">Register</a> </p>
             </form>
         </div>
     );
 }
-
-const mapStateToProps = (state) => {
-    console.log("mapStateToProps");
-    console.log(state.user);
-    return { user: state.user };
-};
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -66,4 +60,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(Login);
